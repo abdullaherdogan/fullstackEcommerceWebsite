@@ -1,0 +1,32 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    align-items: center;
+}
+
+.nav .left {
+    display: flex;
+    align-items: center;
+}
+.nav .left .logo a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 115, 115);
+    padding-right: 10px;
+}
+.nav .left .menu {
+    display: flex;
+    list-style: none;
+}
+.nav .left .menu li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 3px 20px;
+    color: rgb(102, 99, 99);
+    transition: all 0.5s;
+}
+.nav .left .menu li a:hover {
+    color: black;
+}
