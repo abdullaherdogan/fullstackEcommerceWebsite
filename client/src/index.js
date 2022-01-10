@@ -8,6 +8,7 @@ import App from "./App";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -22,7 +23,9 @@ ReactDOM.render(
         <BrowserRouter>
             <QueryClientProvider client={queryClient}>
                 <ChakraProvider>
-                    <App />
+                    <AuthProvider>
+                        <App />
+                    </AuthProvider>
                 </ChakraProvider>
                 <ReactQueryDevtools initialIsOpen={false} />
             </QueryClientProvider>

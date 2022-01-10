@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Image, Button, GridItem } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-function Card({ productId }) {
+function Card({ item }) {
     return (
         <GridItem
             border="1px"
@@ -9,7 +9,7 @@ function Card({ productId }) {
             borderRadius="lg"
             overflow="hidden"
         >
-            <Link to={`/products/${productId}`}>
+            <Link to={`/products/${item._id}`}>
                 <Image
                     src="https://picsum.photos/300/200"
                     p={0}
