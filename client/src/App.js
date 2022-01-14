@@ -6,6 +6,10 @@ import Login from "./pages/Auth/Login";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Profile from "./pages/Profile";
+import Admin from "./pages/Admin";
+import AdminHome from "./pages/Admin/Home";
+import AdminOrders from "./pages/Admin/Orders";
+import AdminProducts from "./pages/Admin/Products";
 function App() {
     return (
         <>
@@ -21,6 +25,11 @@ function App() {
                     <Route path="register" element={<Register />} />
                     <Route path="login" element={<Login />} />
                     <Route path="profile" element={<Profile />} />
+                    <Route path="/admin" element={<Admin />}>
+                        <Route index element={<AdminHome />} />
+                        <Route path="products" element={<AdminProducts />} />
+                        <Route path="orders" element={<AdminOrders />} />
+                    </Route>
                 </Routes>
             </div>
         </>
